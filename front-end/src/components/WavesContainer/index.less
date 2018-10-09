@@ -1,0 +1,44 @@
+.container {
+  position: absolute;
+  overflow: hidden;
+  user-select: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.wavesWrap {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.children {
+  position: relative;
+  z-index: 1;
+}
+.wavesItem {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, .1);
+  animation: wave 2s cubic-bezier(0.3, 1, 0.8, 1);
+  overflow: hidden;
+  transform: scale(.01);
+}
+
+@keyframes wave {
+  from {
+    opacity: 1;
+    transform: scale(.01);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

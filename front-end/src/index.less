@@ -1,0 +1,65 @@
+html, body, :global(#root) {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font: 14px/1.6 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+:global {
+  .ant-checkbox-inner {
+    border-radius: 0 !important;
+  }
+
+  .ant-menu-dark, 
+  .ant-menu-dark .ant-menu-sub {
+    background: #2f4050 !important;
+  }
+
+  .ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background: transparent !important;
+  }
+  
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+
+  .screen-xs {
+    .xs-hide {
+      display: none;
+    }
+  }
+
+  .screen-xs, .screen-sm, .screen-md {
+    .ant-table-row {
+      position: relative;
+    }
+    .ant-table-row:after {
+      position: absolute;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 18px;
+      text-align: center;
+      font-size: 14px;
+      content: "\E61F";
+      font-family: "anticon";
+      color: #ccc;
+    }
+  }
+}
